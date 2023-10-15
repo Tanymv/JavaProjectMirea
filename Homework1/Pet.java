@@ -11,14 +11,6 @@ abstract class Pet {
         this.age = age;
     }
 
-    abstract String getName();
-    abstract void setName(String name);
-    abstract String getNameOwner();
-    abstract void setNameOwner(String nameOwner);
-    abstract String getTypePet();
-    abstract int getAge();
-    abstract void setAge(int age);
-
     @Override
     public String toString() {
         return "Pet{" +
@@ -30,7 +22,6 @@ abstract class Pet {
 }
 
 class Dog extends Pet {
-    private final String typePet = "Собака";
     public Dog(String name, String nameOwner, int age) {
         super(name, nameOwner, age);
     }
@@ -45,44 +36,14 @@ class Dog extends Pet {
         return super.toString();
     }
 
-    @Override
     String getName() {
+        String typePet = "Собака";
         return typePet + " " + name;
     }
 
-    @Override
-    void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    String getNameOwner() {
-        return nameOwner;
-    }
-
-    @Override
-    void setNameOwner(String nameOwner) {
-        this.nameOwner = nameOwner;
-    }
-
-    @Override
-    String getTypePet() {
-        return typePet;
-    }
-
-    @Override
-    int getAge() {
-        return age;
-    }
-
-    @Override
-    void setAge(int age) {
-        this.age = age;
-    }
 }
 
 class Cat extends Pet {
-    private final String typePet = "Кошка";
     public Cat(String name, String nameOwner, int age) {
         super(name, nameOwner, age);
     }
@@ -97,40 +58,15 @@ class Cat extends Pet {
         return super.toString();
     }
 
-    @Override
     String getName() {
+        String typePet = "Кошка";
         return typePet + " " + name;
     }
 
-    @Override
-    void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    String getNameOwner() {
-        return nameOwner;
-    }
-
-    @Override
-    void setNameOwner(String nameOwner) {
-        this.nameOwner = nameOwner;
-    }
-
-    @Override
-    String getTypePet() {
-        return typePet;
-    }
-
-    @Override
     int getAge() {
         return age;
     }
 
-    @Override
-    void setAge(int age) {
-        this.age = age;
-    }
 }
 
 class Main {
